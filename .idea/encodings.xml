@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/cn/cad/mobile/ArrayOfString.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/cad/mobile/GetDatabaseInfo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/cad/mobile/GetDatabaseInfoResponse.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/cad/mobile/GetMobileCodeInfo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/cad/mobile/GetMobileCodeInfoResponse.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/cad/mobile/MobileCodeWS.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/cad/mobile/MobileCodeWSSoap.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/cad/mobile/package-info.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
