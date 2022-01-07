@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class TestP {
@@ -137,5 +138,58 @@ public class TestP {
             System.out.println(divide);
         }
 
+    }
+    @Test
+    public void test346(){
+        System.out.println(test("202112"));
+    }
+
+    /**
+     * 传入期间
+     * 传出起始时间，截至时间
+     */
+
+    public static HashMap<String, String> test(String periodStr){//202112
+        HashMap<String, String> hashMap = new HashMap<String, String>();
+
+        String yearStr = periodStr.substring(0, 4);
+        int spYear2 = Integer.parseInt(yearStr);
+        String monthStr = periodStr.substring(4, 6);
+        int spNum2 = Integer.parseInt(monthStr);
+
+        Boolean flag = null;
+        if ((spYear2%4==0&&spYear2%100!=0)||spYear2%400==0) {
+            System.out.println(spYear2+"是闰年");
+            flag = true;
+        }else {
+            System.out.println(spYear2+"不是闰年");
+            flag = false;
+        }
+
+        String endT = "" + spYear2+"-";
+        if(spNum2==1||spNum2==3||spNum2==5||spNum2==7||spNum2==8||spNum2==10||spNum2==12){
+            if(spNum2<10){
+                endT += "0"+spNum2+"-31 23:59:59";
+            }else{
+                endT += spNum2+"-31 23:59:59";
+            }
+
+        }else if(spNum2==4||spNum2==6||spNum2==9||spNum2==11){
+            if(spNum2<10){
+                endT += "0"+spNum2+"-30 23:59:59";
+            }else{
+                endT += spNum2+"-30 23:59:59";
+            }
+        }else if(spNum2==2){
+            if(flag){
+                endT += "0"+spNum2+"-29 23:59:59";
+            }else{
+                endT += "0"+spNum2+"-28 23:59:59";
+            }
+        }
+
+        hashMap.put("startDay", yearStr+"-"+monthStr+"-01 00:00:00");
+        hashMap.put("endDay", endT);
+        return hashMap;
     }
 }
